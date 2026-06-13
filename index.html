@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Baby Name Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;400;500;600&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <i class="fas fa-mosque" style="font-size: 3.5rem; color: var(--primary-color);"></i>
+                <h1>Islamic Baby Name Generator</h1>
+                <i class="fas fa-star-and-crescent" style="font-size: 3.5rem; color: var(--accent-color);"></i>
+            </div>
+            <p class="subtitle">Discover meaningful and beautiful Islamic names for your child. Each name is carefully selected from authentic Arabic and Islamic origins with cultural significance.</p>
+            <div class="arabic-decoration">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>
+        </header>
+        
+        <div class="generator-container">
+            <section class="input-section">
+                <h2 class="section-title">Find Your Baby's Name</h2>
+                
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="starting-letter"><i class="fas fa-font"></i> Starting Letter</label>
+                        <input type="text" id="starting-letter" maxlength="1" placeholder="e.g., H, A, M" value="H">
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="gender"><i class="fas fa-venus-mars"></i> Gender (Optional)</label>
+                        <select id="gender">
+                            <option value="any">Any Gender</option>
+                            <option value="boy">Boy</option>
+                            <option value="girl">Girl</option>
+                            <option value="unisex">Unisex</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-box">
+                        <label for="name-count"><i class="fas fa-list-ol"></i> Show Names</label>
+                        <select id="name-count">
+                            <option value="10">10 Names</option>
+                            <option value="20">20 Names</option>
+                            <option value="30">30 Names</option>
+                            <option value="40">40 Names</option>
+                            <option value="50">50 Names</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button class="btn-generate" id="generate-btn">
+                    <i class="fas fa-search"></i> Generate Islamic Names
+                </button>
+            </section>
+            
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Searching our database for beautiful Islamic names...</p>
+            </div>
+            
+            <section class="results-section" id="results-section">
+                <div class="results-header">
+                    <h2 class="section-title">Generated Names</h2>
+                    <div class="results-count" id="results-count">
+                        <i class="fas fa-list"></i>
+                        <span>Showing <span id="showing-count">0</span> of <span id="total-count">0</span> names</span>
+                    </div>
+                </div>
+                
+                <div id="names-container">
+                    <p class="no-results">Enter a starting letter and click "Generate Islamic Names" to see results.</p>
+                </div>
+                
+                <div class="pagination" id="pagination" style="display: none;"></div>
+            </section>
+        </div>
+        
+        <footer class="footer">
+            <p>© 2023 Islamic Baby Name Generator | Designed with respect for Islamic traditions</p>
+            <p>All names are sourced from authentic Islamic and Arabic origins with meaningful interpretations.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
